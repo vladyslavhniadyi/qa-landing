@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Landing page про основні типи та рівні тестування програмного забезпечення">
+  <meta name="author" content="QA Engineer">
+  <title>Типи тестування ПЗ | QA Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== ШАПКА ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">QA<span>Guide</span></a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="#about">Про тестування</a></li>
+          <li><a href="#types">Типи</a></li>
+          <li><a href="#levels">Рівні</a></li>
+          <li><a href="#compare">Порівняння</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1>Типи тестування програмного забезпечення</h1>
+          <p>
+            Простий гід для тих, хто хоче розібратися, <strong>що</strong>, <strong>як</strong>
+            і <strong>навіщо</strong> перевіряють QA-інженери перед релізом продукту.
+          </p>
+          <div class="hero__buttons">
+            <a href="#types" class="btn">Дізнатися більше</a>
+            <a href="#contact" class="btn btn--outline">Поставити питання</a>
+          </div>
+        </div>
+
+        <figure class="hero__image">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='90' fill='%2322c55e'/><path d='M60 105 L90 135 L145 70' stroke='white' stroke-width='16' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>"
+               alt="Зелена галочка — символ успішно пройденого тесту" width="220" height="220">
+          <figcaption>Test passed ✔</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== ПРО ТЕСТУВАННЯ ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>Що таке тестування?</h2>
+        <p>
+          <abbr title="Quality Assurance">QA</abbr>-тестування — це процес перевірки програмного
+          забезпечення на відповідність <em>вимогам</em> та <em>очікуванням користувача</em>.
+          Основна мета — <mark>знайти дефекти до того, як їх знайде користувач</mark>.
+        </p>
+
+        <blockquote class="quote">
+          «Тестування може показати наявність дефектів, але не може довести їх відсутність.»
+          <cite>— один із 7 принципів тестування (ISTQB)</cite>
+        </blockquote>
+
+        <p>Приклад заголовка баг-репорту:</p>
+        <p><code>(Dragonrise; 11026; UI) Spin button is not displayed after Free Spins end</code></p>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ===== ТИПИ ТЕСТУВАННЯ ===== -->
+    <section id="types" class="section">
+      <div class="container">
+        <h2>Основні типи тестування</h2>
+        <p class="section__subtitle">Кожен тип відповідає на своє питання про якість продукту.</p>
+
+        <div class="cards">
+          <article class="card">
+            <span class="card__icon">⚙️</span>
+            <h3>Функціональне</h3>
+            <p>Перевіряє, <strong>що</strong> робить система: чи працюють функції згідно з вимогами.</p>
+            <span class="tag">Functional</span>
+          </article>
+
+          <article class="card">
+            <span class="card__icon">📊</span>
+            <h3>Нефункціональне</h3>
+            <p>Перевіряє, <strong>як</strong> працює система: швидкість, зручність, безпека.</p>
+            <span class="tag">Non-functional</span>
+          </article>
+
+          <article class="card">
+            <span class="card__icon">🔁</span>
+            <h3>Регресійне</h3>
+            <p>Перевіряє, що нові зміни не зламали функціонал, який уже працював.</p>
+            <span class="tag">Regression</span>
+          </article>
+
+          <article class="card">
+            <span class="card__icon">💨</span>
+            <h3>Smoke</h3>
+            <p>Швидка перевірка критичних функцій нової збірки: чи можна її тестувати далі.</p>
+            <span class="tag">Smoke</span>
+          </article>
+
+          <article class="card">
+            <span class="card__icon">🎯</span>
+            <h3>Sanity</h3>
+            <p>Вузька перевірка конкретного виправлення або невеликої зміни.</p>
+            <span class="tag">Sanity</span>
+          </article>
+
+          <article class="card">
+            <span class="card__icon">🚀</span>
+            <h3>Навантажувальне</h3>
+            <p>Перевіряє поведінку системи під великою кількістю користувачів або запитів.</p>
+            <span class="tag">Performance</span>
+          </article>
+
+          <article class="card">
+            <span class="card__icon">🔒</span>
+            <h3>Безпеки</h3>
+            <p>Шукає вразливості, через які можна отримати доступ до даних чи системи.</p>
+            <span class="tag">Security</span>
+          </article>
+
+          <article class="card">
+            <span class="card__icon">📱</span>
+            <h3>Сумісності</h3>
+            <p>Перевіряє роботу на різних ОС, браузерах, пристроях та роздільних здатностях.</p>
+            <span class="tag">Compatibility</span>
+          </article>
+
+          <article class="card">
+            <span class="card__icon">🧭</span>
+            <h3>Дослідницьке</h3>
+            <p>Тестування без заздалегідь написаних кейсів, на основі досвіду та інтуїції.</p>
+            <span class="tag">Exploratory</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== РІВНІ ТЕСТУВАННЯ ===== -->
+    <section id="levels" class="section section--gray">
+      <div class="container levels">
+        <div class="levels__main">
+          <h2>Рівні тестування</h2>
+          <ol class="levels__list">
+            <li><strong>Модульне (Unit)</strong> — перевірка окремих функцій чи класів. Зазвичай пишуть розробники.</li>
+            <li><strong>Інтеграційне (Integration)</strong> — перевірка взаємодії між модулями.</li>
+            <li><strong>Системне (System)</strong> — перевірка всієї системи цілком.</li>
+            <li><strong>Приймальне (Acceptance)</strong> — перевірка, чи готовий продукт для замовника.</li>
+          </ol>
+        </div>
+
+        <aside class="tip">
+          <h4>💡 Порада</h4>
+          <p>Чим раніше знайдено дефект, тим дешевше його виправити.<br>
+             Тому тестування варто починати ще на етапі аналізу вимог.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== ПОРІВНЯННЯ ===== -->
+    <section id="compare" class="section">
+      <div class="container">
+        <h2>Ручне чи автоматизоване?</h2>
+        <div class="table-wrapper">
+          <table class="table">
+            <caption>Порівняння підходів до тестування</caption>
+            <thead>
+              <tr>
+                <th>Критерій</th>
+                <th>Ручне</th>
+                <th>Автоматизоване</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Швидкість виконання</td>
+                <td>Повільно</td>
+                <td>Швидко</td>
+              </tr>
+              <tr>
+                <td>Вартість на старті</td>
+                <td>Низька</td>
+                <td>Висока</td>
+              </tr>
+              <tr>
+                <td>UX / візуальні перевірки</td>
+                <td>Відмінно</td>
+                <td>Обмежено</td>
+              </tr>
+              <tr>
+                <td>Регресія</td>
+                <td>Довго і монотонно</td>
+                <td>Ідеально підходить</td>
+              </tr>
+              <tr>
+                <td>Дослідницьке тестування</td>
+                <td>Так</td>
+                <td>Ні</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="section section--gray">
+      <div class="container">
+        <h2>Часті питання</h2>
+
+        <details class="faq">
+          <summary>Чим Smoke відрізняється від Sanity?</summary>
+          <p>Smoke — це широка, але поверхнева перевірка всієї збірки. Sanity — вузька і глибша перевірка конкретної зміни.</p>
+        </details>
+
+        <details class="faq">
+          <summary>Що таке баг-репорт?</summary>
+          <p>Документ з описом дефекту: Summary, кроки відтворення, фактичний та очікуваний результат, оточення.</p>
+        </details>
+
+        <details class="faq">
+          <summary>Чи можна повністю замінити ручне тестування автоматизацією?</summary>
+          <p>Ні. Автоматизація прискорює рутинні перевірки, але юзабіліті та дослідницьке тестування потребують людини.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== КОНТАКТИ / ФОРМА ===== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Поставте питання</h2>
+        <form class="form" action="#" method="post">
+          <div class="form__group">
+            <label for="name">Ім'я</label>
+            <input type="text" id="name" name="name" placeholder="Ваше ім'я" required>
+          </div>
+
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+          </div>
+
+          <div class="form__group">
+            <label for="topic">Тема</label>
+            <select id="topic" name="topic">
+              <option value="types">Типи тестування</option>
+              <option value="levels">Рівні тестування</option>
+              <option value="bugs">Баг-репорти</option>
+              <option value="other">Інше</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="message">Повідомлення</label>
+            <textarea id="message" name="message" rows="5" placeholder="Ваше питання..."></textarea>
+          </div>
+
+          <div class="form__check">
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">Погоджуюсь на обробку даних</label>
+          </div>
+
+          <button type="submit" class="btn">Надіслати</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== ПІДВАЛ ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; 2025 QA Guide. Усі права захищено.</p>
+      <address>
+        Email: <a href="mailto:qa@example.com">qa@example.com</a>
+      </address>
+      <a href="#top" class="footer__up">↑ Нагору</a>
+    </div>
+  </footer>
+
+</body>
+</html>
